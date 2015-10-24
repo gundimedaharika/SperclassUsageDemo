@@ -1,0 +1,54 @@
+public class InheritanceDemo1 {
+    public static void main1(String[] args) {
+        InA1 obj1 = new InA1();
+        System.out.println("From Superclass we can access");
+        obj1.show();
+        obj1.show(5);
+        
+        InB1 obj2 = new InB1();
+        System.out.println("");
+        System.out.println("From Subclass1 we can access");
+        obj2.show();
+        obj2.show(6);
+        
+        InC1 obj3 = new InC1();
+        System.out.println("");
+        System.out.println("From Subclass2 we can access");
+        obj3.show();
+        obj3.show(7);
+    }
+}
+class InA1{
+    public void show(){
+        System.out.println("Method from Superclass");
+    }
+    public void show(int i){
+        System.out.println("Method from superclass with integer "+i);
+    }
+}
+class InB1 extends InA1{
+    public void show(){
+        System.out.println("Method from Subclass1");
+    }
+    public void show(int i){
+        System.out.println("Method from subclass1 with integer "+i);
+    }    
+}
+class InC1 extends InB1{
+    public void show(){
+        System.out.println("Method from Subclass2");
+    }
+    public void show(int i){
+        System.out.println("Method from subclass2 with integer "+i);
+    }    
+}
+
+/*****************
+ * In this demo we are experimenting on Overloading and inheritance
+ * 
+ * Now here experimenting on how to access all methods from every class
+ * Because when we access from our parent class it can access only first default method and 
+ * gives that output
+ * 
+ * so let us see how we can access all methods from all classes.
+ */
